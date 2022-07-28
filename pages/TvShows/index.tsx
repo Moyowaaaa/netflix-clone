@@ -3,6 +3,8 @@ import Banner from '../../components/Banner'
 import Navbar from '../../components/Navbar'
 import Row from '../../components/Row'
 import { fetchData } from '../../utils/requests'
+import Jumbotron from '../../components/Jumbotron'
+
 
 interface Props {
   todaysTv:any[],
@@ -19,11 +21,12 @@ const Movies: NextPage<Props> = ({todaysTv ,topRatedTv, popularTv}) => {
 
 
   return (
-    <div className='flex flex-col w-10/12 mx-auto'>
-    <div className=' h-screen flex w-full  flex-col relative items-center mx-auto'>
+    <div className='flex flex-col  mx-16'>
+    <div className=' h-screen flex w-full  flex-col relative '>
       
         <Navbar />
         <Banner popular={popularTv}/>
+        {/* <Jumbotron /> */}
     </div>
     <Row data={todaysTv} title="Today's Tv Shows" />
     <Row data={topRatedTv} title="Top rated Tv shows" />

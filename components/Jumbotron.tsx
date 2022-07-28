@@ -15,20 +15,23 @@ const Jumbotron:React.FC<Props> = ({popular}) => {
     const ReactPlayer = dynamic(() => import('react-player'), { ssr: false })
 
   return (
-    <div className=''>
-    <ReactPlayer playing={false}
-    className="react-player"
+    <div className=' absolute top-16 h-[100vh] w-11/12 flex flex-col object-cover'>
+    <ReactPlayer playing={true}
+    className="react-player border-2 border-[red] h-full w-full "
     loop={true}
     width='100%'
     height={'100%'}
-    volume={1}
+    volume={0}
     muted={false}
-    url={"https://vimeo.com/727214487"} />
+    url={"https://vimeo.com/616808396"} />
 
     </div>
   )
 
 
 }
+
+
+
 
 export default Jumbotron

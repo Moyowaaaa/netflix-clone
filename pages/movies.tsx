@@ -16,8 +16,8 @@ interface Props {
 
 const Movies: NextPage<Props> = ({playing,popular, comingSoon, topRated}) => {
   return (
-    <div className='flex flex-col w-10/12 mx-auto'>
-    <div className=' h-screen flex w-full  flex-col relative items-center mx-auto'>
+    <div className='flex flex-col  mx-16'>
+    <div className=' h-screen flex w-full  flex-col relative '>
         <Navbar />
         <Banner popular={popular} />
         </div>
