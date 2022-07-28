@@ -54,8 +54,8 @@ const Home: NextPage<Props> = ({popular, playing, popularTv}) => {
 export default Home
 
 export const getServerSideProps = async() => {
-  // const api_key = process.env.API_KEY
-  const api_key = "fc66a3e2b7af135167185d8882134a83"
+  const api_key = process.env.NEXT_PUBLIC_API_KEY
+
 
   const trending = await fetchData('https://api.themoviedb.org/3/movie/popular', api_key)
   const nowplaying = await fetchData('https://api.themoviedb.org/3/movie/now_playing', api_key)

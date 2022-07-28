@@ -39,7 +39,8 @@ export default Movies
 
 
 export const getServerSideProps = async() => {
-  const api_key = "fc66a3e2b7af135167185d8882134a83"
+  const api_key = process.env.NEXT_PUBLIC_API_KEY
+
   const showsToday = await fetchData('https://api.themoviedb.org/3/tv/airing_today', api_key)
   const popularTvShows = await fetchData('https://api.themoviedb.org/3/tv/popular', api_key)
   const top = await fetchData('https://api.themoviedb.org/3/tv/top_rated', api_key)
