@@ -141,6 +141,9 @@ width: 2px;
   .swiper-button-prev, .swiper-button-next {
   display:none !important;
   }
+  .modal-main{
+    width:100%;
+  }
 }
 
 
