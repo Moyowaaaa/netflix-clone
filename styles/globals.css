@@ -93,6 +93,45 @@ width: 2px;
 ::-webkit-scrollbar-track {
   background: black;
 }
+.modal-main{
+  display: flex;
+  height: auto;
+  flex-direction: column;
+}
+.modal{
+  box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.663);
+  width: 50%;
+  padding-bottom: 30px;
+  max-height: 100vh;
+  border-radius: 10px;
+  overflow-y:scroll;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #141414;
+  z-index: 9000;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25rem;
+  
+
+}
+.content{
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25rem;
+}
+
+@media screen and (max-width:485px) {
+  .swiper-slide {
+    width: 100%  !important;
+  }
+  .swiper-button-prev, .swiper-button-next {
+  display:none !important;
+  }
+}
 
 
 
