@@ -19,7 +19,7 @@ const Movies: NextPage<Props> = ({
   topRated,
 }) => {
   return (
-    <div className="flex flex-col  lg:mx-16">
+    <div className="flex flex-col  lg:mx-16 ">
       <div className=" h-screen flex w-full  flex-col relative ">
         <Navbar />
         <Banner popular={popular} />

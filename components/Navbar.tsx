@@ -38,8 +38,8 @@ const Navbar:React.FC = () => {
 
 
   return (
-    // <div className={`'fixed w-full  mb-4 flex h-[4rem] py-0  z-50 fixed w-10/12 ' ${isScrolled? 'bg-[#141414]' : ''}`}>
-    <div className={`nav w-full  mb-4 flex h-[4rem] py-0  z-50 fixed  ${isScrolled? 'bg-none' : ''}`}>
+    // <div className={`'fixed w-full  mb-4 flex h-[4rem] py-0   fixed w-10/12 ' ${isScrolled? 'bg-[#141414]' : ''}`}>
+    <div className={`nav w-full  mb-4 flex h-[4rem] py-0   fixed  ${isScrolled? 'bg-none' : ''}`}>
 
 
         <div className='flex '>

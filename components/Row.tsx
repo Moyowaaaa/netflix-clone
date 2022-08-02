@@ -36,7 +36,7 @@ const Row:React.FC<Props> = ({ data, title,content}) => {
 
 
   return (
-    <div className='mb-6 z-50'>
+    <div className='mb-6 '>
       <h2 className='py-4 pl-2'>{title}</h2>
       <Swiper slidesPerView={5}
         slidesPerGroup={5}
@@ -44,6 +44,7 @@ const Row:React.FC<Props> = ({ data, title,content}) => {
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         grabCursor={true}
         navigation={true}
+       
         loop={true}
         pagination={{ clickable: true }}
         speed={1000}
@@ -63,6 +64,7 @@ const Row:React.FC<Props> = ({ data, title,content}) => {
         }}
         keyboard={{
           enabled: true,
+        
         }}>
         {data && data.map((item:any) => (
           <SwiperSlide key={item.id}>
