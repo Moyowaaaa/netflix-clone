@@ -27,8 +27,7 @@ const Home: NextPage<Props> = ({ popular, playing, popularTv }) => {
       { title: "Popular Tv", data: popularTv },
   
   ]
-  console.log("content", content.forEach((item:any) => console.log(item.title)));
-  console.log("content data", content.forEach((item:any) => console.log(item.data)));
+
 
   return (
     <div className="flex flex-col  lg:mx-16">

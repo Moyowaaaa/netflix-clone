@@ -12,7 +12,7 @@ interface Props {
 }
 
 const InfoModal:React.FC<Props> = ({set,id, title, description, rating, date, image}) => {
-  console.log("imag",image)
+
   return (
     <div className='modal-main rounded-lg'>
       <div className='modal-background h-[20rem] w-full '  style = {image !== null ? {backgroundImage: `url(https://image.tmdb.org/t/p/w500/${image})`} : {backgroundImage: `url(/fallback.jpeg)`}}>
@@ -21,9 +21,6 @@ const InfoModal:React.FC<Props> = ({set,id, title, description, rating, date, im
         }}>X</p>
          <div className='pl-4 absolute bottom-56 '>
         <p className=' text-2xl lg:text-[3.3rem] z-50'>{title}</p>
-        {/* <div className='w-full flex flex-col'>
-          <p className='text-sm w-9/12'>{description}</p>
-          </div> */}
 
 </div>
       

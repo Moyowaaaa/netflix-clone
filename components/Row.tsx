@@ -26,13 +26,6 @@ const Row:React.FC<Props> = ({ data, title,content}) => {
   const [description, setDescription] = useState<any>(null)
 
 
-  // const titles:string[] = content.map((item:any) => item.title)
-  // const contentdata:any[] = content.map((item:any) => item.data)
-
-
-  // console.log("titles", titles);
-  // console.log("contentdata", contentdata);
-
 
 
   return (
@@ -70,7 +63,7 @@ const Row:React.FC<Props> = ({ data, title,content}) => {
           <SwiperSlide key={item.id}>
             <div onClick={() => {
               setShowModal(true)
-              console.log(item)
+           
               setSelectedId(item.id)
               setSelectedTitle(item.original_title || item.title)
               setDescription(item.overview)
