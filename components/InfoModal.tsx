@@ -14,33 +14,28 @@ interface Props {
 const InfoModal:React.FC<Props> = ({set,id, title, description, rating, date, image}) => {
   console.log("imag",image)
   return (
-    <div className='modal-main'>
-    <div className='modal' style = {image !== null ? {backgroundImage: `url(https://image.tmdb.org/t/p/w500/${image})`} : {backgroundImage: `url(/fallback.jpeg)`}}>
-    
-        <div className='modal-content'>
-            <div className='modal-header'>
-                <p className='w-[3rem] h-[3rem] rounded-full right-0 absolute py-4 mt-2 flex items-center justify-center cursor-pointer mr-4 bg-[black]' onClick={() => {
-                    set(false)
-                }}>X</p>
-                <div className='pl-4 absolute bottom-12'>
-                <p className='z-50 text-[3.3rem]'>{title}</p>
-                <div className='w-full flex flex-col'>
-                  <p className='text-sm w-9/12'>{description}</p>
-                  </div>
+    <div className='modal-main rounded-lg'>
+      <div className='modal-background h-[20rem] w-full '  style = {image !== null ? {backgroundImage: `url(https://image.tmdb.org/t/p/w500/${image})`} : {backgroundImage: `url(/fallback.jpeg)`}}>
+      <p className='w-[3rem] h-[3rem] rounded-full right-0 absolute py-4 mt-2 flex items-center justify-center cursor-pointer mr-4 bg-[black]' onClick={() => {
+            set(false)
+        }}>X</p>
+         <div className='pl-4 absolute bottom-48 z-50'>
+        <p className='z-50 text-[3.3rem]'>{title}</p>
+        {/* <div className='w-full flex flex-col'>
+          <p className='text-sm w-9/12'>{description}</p>
+          </div> */}
 
 </div>
-              
+      
+        <div className='modal-fade'></div>
 
-<div className='flex w-full bg-[black] pl-4  gap-12 absolute bottom-0 py-2'>
-                    <small className='text-[#46d369] text-lg'>{rating}/10 Rating </small>
+       
+      </div>
+      <div className='w-full  h-[10rem] z-50 flex flex-col pl-4 gap-4'>
+      <small className='text-[#46d369] text-lg'>{rating}/10 Rating </small>
 
-                    <small className='text-[#46d369] text-lg'>{date}</small>
-                    
-                  </div>
-
-                </div>
-                </div>
-                </div>
+      <p className='text-sm w-9/12'>{description}</p>
+      </div>
     </div>
   )
 }
