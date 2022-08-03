@@ -13,10 +13,10 @@ import 'swiper/css/scrollbar';
 interface Props{
   title:string,
   data:any[],
-  content:any[],
+
 }
 
-const Row:React.FC<Props> = ({ data, title,content}) => {
+const Row:React.FC<Props> = ({ data, title}) => {
   const [showModal,setShowModal] = useState<boolean>(false);
   const [selectedId,setSelectedId] = useState<any>(null);
   const [image,setImage] = useState<any>(null);
@@ -63,9 +63,8 @@ const Row:React.FC<Props> = ({ data, title,content}) => {
           <SwiperSlide key={item.id}>
             <div onClick={() => {
               setShowModal(true)
-           
               setSelectedId(item.id)
-              setSelectedTitle(item.original_title || item.title)
+              setSelectedTitle(item.original_title || item.title ||item.original_name || item.name)
               setDescription(item.overview)
               setDate(item.release_date)
               setRating(item.vote_average)

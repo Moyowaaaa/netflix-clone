@@ -12,7 +12,7 @@ interface Props {
   topRated: any[];
 }
 
-const Movies: NextPage<Props> = ({
+const Movies: NextPage <Props> = ({
   playing,
   popular,
   comingSoon,
