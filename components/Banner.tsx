@@ -8,7 +8,7 @@ interface Props {
     popular:any[]
 }
 
-const Banner:React.FC = ({popular}) => {
+const Banner:React.FC<Props> = ({popular}) => {
   const [showModal,setShowModal] = useState<boolean>(false);
   const [selectedId,setSelectedId] = useState<any>(null);
   const [image,setImage] = useState<any>(null);
