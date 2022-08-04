@@ -19,7 +19,8 @@ interface Props {
   
 }
 
-const Home: NextPage<Props> = ({ popular, playing, popularTv }) => {
+
+const Home:  NextPage<Props> = ({ popular, playing, popularTv }) => {
 
   const content:any[] = [
      { title: "Popular Movies", data: popular },

@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar";
 import Row from "../../components/Row";
 import { fetchData } from "../../utils/requests";
 import Jumbotron from "../../components/Jumbotron";
+import type { NextPage } from "next";
 
 interface Props {
   todaysTv: any[];

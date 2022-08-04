@@ -10,7 +10,7 @@ import { fetchData } from "../../utils/requests";
 
 interface Props {
   comingSoon: any[];
-  playing: any[];
+  playing: any[];   
   popular: any[];
   topRated:any[];
   
