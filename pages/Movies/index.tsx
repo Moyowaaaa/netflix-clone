@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
-import Banner from "../components/Banner";
-import Jumbotron from "../components/Jumbotron";
-import Navbar from "../components/Navbar";
-import Row from "../components/Row";
-import { fetchData } from "../utils/requests";
+import type { NextPage } from "next";
+import Banner from "../../components/Banner";
+import Jumbotron from "../../components/Jumbotron";
+import Navbar from "../../components/Navbar";
+import Row from "../../components/Row";
+import { fetchData } from "../../utils/requests";
+
+
 
 interface Props {
-  popular: any[];
-  playing: any[];
   comingSoon: any[];
-  topRated: any[];
+  playing: any[];
+  popular: any[];
+  topRated:any[];
+  
 }
 
-const Movies: NextPage <Props> = ({
-  playing,
-  popular,
-  comingSoon,
-  topRated,
-}) => {
+
+const Movies: NextPage<Props> = ({playing,popular,comingSoon, topRated,}) => {
   return (
     <div className="flex flex-col  lg:mx-16 ">
       <div className=" h-screen flex w-full  flex-col relative ">

@@ -17,7 +17,7 @@ const Navbar:React.FC = () => {
     },
     {
         name:'Movies',
-        link:'/movies'
+        link:'/Movies'
     },
 ]
     useEffect(() => {

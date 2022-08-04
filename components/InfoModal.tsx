@@ -2,13 +2,13 @@ import React from 'react'
 
 
 interface Props {
-  set: boolean;
+  set:any
   id:number;
   title:string,
   rating:number,
   description:string,
   date:string | number,
-  image:string 
+  image:any 
 }
 
 const InfoModal:React.FC<Props> = ({set,id, title, description, rating, date, image}) => {
