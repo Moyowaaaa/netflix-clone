@@ -26,7 +26,7 @@ const Banner:React.FC<Props> = ({popular}) => {
 
     
   return (
-    <div className='absolute top-16 h-[100vh] w-full flex flex-col object-cover ' >
+    <div className='absolute top-16 h-[50vh] lg:h-[100vh] w-full flex flex-col object-cover ' >
         <div className='absolute w-full h-full'>
         <img src={`https://image.tmdb.org/t/p/w500/${movie?.backdrop_path}`}  alt={"poster"} className="w-full h-full" />
         </div>

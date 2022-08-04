@@ -145,13 +145,16 @@ width: 2px;
 
 @media screen and (max-width:485px) {
   .swiper-slide {
-    width: 100%  !important;
+    width: 90%  !important;
   }
   .swiper-button-prev, .swiper-button-next {
   display:none !important;
   }
   .modal-main{
     width:100%;
+  }
+  .swiper-pagination-bullet {
+    display: none !important;
   }
 }
 
