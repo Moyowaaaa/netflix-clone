@@ -15,7 +15,7 @@ interface Props {
   popular: any[];
   playing: any[];
   popularTv: any[];
-  title:any[];
+  title:string[];
   
 }
 

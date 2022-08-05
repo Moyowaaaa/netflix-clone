@@ -31,7 +31,7 @@ const Banner:React.FC<Props> = ({popular}) => {
         <img src={`https://image.tmdb.org/t/p/w500/${movie?.backdrop_path}`}  alt={"poster"} className="w-full h-full" />
         </div>
 
-        <div className='absolute bottom-40 left-6 flex flex-col gap-4 text-shadow-md '>
+        <div className='absolute bottom-6 left-2 lg:bottom-40 lg:left-6 flex flex-col gap-4 text-shadow-md '>
      <h1 className='text-3xl lg:text-6xl max-w-3xl drop-shadow-2xl'>{movie?.title || movie?.name || movie?.original_name}</h1>
      <p className='lg:max-w-2xl text-justify w-11/12 lg:w-full  text-xs lg:text-lg drop-shadow-2xl'>{movie?.overview}</p>
      <div className="flex space-x-3 z-10">
