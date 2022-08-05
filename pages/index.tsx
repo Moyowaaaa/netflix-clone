@@ -7,7 +7,8 @@ import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Jumbotron from "../components/Jumbotron";
 import Row from "../components/Row";
-import Banner from "../components/Banner";
+
+import dynamic from "next/dynamic";
 
 import { fetchData } from "../utils/requests";
 
@@ -21,6 +22,9 @@ interface Props {
 
 
 const Home:  NextPage<Props> = ({ popular, playing, popularTv }) => {
+  const Banner = dynamic(() => import("../components/Banner"), {
+    ssr: false,
+  });
   console.log(popularTv)
 
   const content:any[] = [
@@ -33,7 +37,7 @@ const Home:  NextPage<Props> = ({ popular, playing, popularTv }) => {
 
 
   return (
-    <div className="flex flex-col  ">
+    <div className="flex flex-col  bg-[#141414]">
       <div className="h-[50vh] lg:h-screen flex w-full  flex-col relative ">
         <Navbar />
 

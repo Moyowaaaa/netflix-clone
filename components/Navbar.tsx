@@ -5,7 +5,7 @@ import logo from "../public/netflix-logo.png";
 
 const Navbar:React.FC = () => {
 
-    const [isScrolled, setIsScrolled] = useState(false)
+    const [isScrolled, setIsScrolled] = useState<boolean>(false)
 
     const navLinks = [{
         name:'Home',
@@ -36,12 +36,10 @@ const Navbar:React.FC = () => {
         }
     },[])
 
-    // bg-gradient-to-r from-[rgba(0, 0, 0, 0.7)] to-[rgba(0, 0, 0, 0)]
-
 
   return (
-    <div className={`nav w-full  mb-4 flex h-[4rem] py-0   fixed z-50  ${isScrolled? 'bg-gradient-to-r from-[rgba(0, 0, 0, 0.7)] to-[rgba(0, 0, 0, 0)]' : 'bg-gradient-to-r from-[rgba(0, 0, 0, 0.7)] to-[rgba(0, 0, 0, 0)]'}`}>
-  
+    <div className={` w-full  mb-4 flex h-[4rem] py-0   fixed z-50  ${isScrolled? 'bg-[black]' : 'bg-transparent'}`}>
+
 
         <div className='flex '>
             <Image src={logo} width={120}/>

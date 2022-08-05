@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Banner from "../../components/Banner";
+
 import Navbar from "../../components/Navbar";
 import Row from "../../components/Row";
 import { fetchData } from "../../utils/requests";
 import Jumbotron from "../../components/Jumbotron";
 import type { NextPage } from "next";
+import dynamic from "next/dynamic";
 
 interface Props {
   todaysTv: any[];
@@ -13,8 +14,13 @@ interface Props {
 }
 
 const Movies: NextPage<Props> = ({ todaysTv, topRatedTv, popularTv }) => {
+  const Banner = dynamic(() => import("../../components/Banner"), {
+    ssr: false,
+  });
+
+
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col bg-[#141414] ">
       <div className="h-[50vh] lg:h-screen flex w-full  flex-col relative ">
         <Navbar />
         <Banner popular={popularTv} />
