@@ -23,11 +23,11 @@ a {
   box-sizing: border-box;
 }
 
-.nav{
+/* .nav{
   transition: background 3s ease-in-out;
 background: linear-gradient(rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));;
 z-index: 10000;
-}
+} */
 .bannerButton {
     display: flex ;
     align-items: center;
@@ -128,7 +128,7 @@ width: 2px;
   transform: translate(-50%, -50%);
   background: #141414;
   z-index: 9000;
-  height: auto;
+  height: 70vh;
   
 }
 .modal-background{

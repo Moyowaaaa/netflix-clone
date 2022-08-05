@@ -68,7 +68,7 @@ const Row:React.FC<Props> = ({ data, title}) => {
               setDescription(item.overview)
               setDate(item.release_date)
               setRating(item.vote_average)
-              setImage(item.backdrop_path)
+              setImage(item.backdrop_path || item.poster_path)
             }}>
           <img  src={`https://image.tmdb.org/t/p/w500/${item?.backdrop_path}`}  alt={`${item?.name || item?.original_name}`}  />
           </div>

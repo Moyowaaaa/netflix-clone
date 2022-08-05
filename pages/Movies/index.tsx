@@ -19,7 +19,7 @@ interface Props {
 
 const Movies: NextPage<Props> = ({playing,popular,comingSoon, topRated,}) => {
   return (
-    <div className="flex flex-col  lg:mx-16 ">
+    <div className="flex flex-col   ">
       <div className="h-[50vh] lg:h-screen flex w-full  flex-col relative ">
         <Navbar />
         <Banner popular={popular} />

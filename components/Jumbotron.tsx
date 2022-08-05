@@ -9,8 +9,7 @@ interface Props {
     popular:any[],
 }
 
-const Jumbotron:React.FC<Props> = ({popular}) => {
-    const baseUrl:string = 'https://image.tmdb.org/t/p/original/'
+const Jumbotron:React.FC<Props> = () => {
 
     const ReactPlayer = dynamic(() => import('react-player'), { ssr: false })
 
