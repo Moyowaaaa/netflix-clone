@@ -19,6 +19,10 @@ const Navbar:React.FC = () => {
         name:'Movies',
         link:'/Movies'
     },
+    {
+        name:'My List',
+        link:'/my-list'
+    }
 ]
     useEffect(() => {
         const handleScroll = () => {

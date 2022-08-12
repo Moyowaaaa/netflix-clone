@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import Navbar from "../../components/Navbar";
 import Row from "../../components/Row";
 import { fetchData } from "../../utils/requests";

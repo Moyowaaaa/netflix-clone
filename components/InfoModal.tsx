@@ -1,4 +1,8 @@
 import React from 'react'
+import {useSelector, useDispatch} from 'react-redux'
+import { addItem,removeItem } from '../redux/myListSlice';
+import { PlusIcon } from '@heroicons/react/outline';
+
 
 
 interface Props {
@@ -12,6 +16,17 @@ interface Props {
 }
 
 const InfoModal:React.FC<Props> = ({set,id, title, description, rating, date, image}) => {
+  const dispatch = useDispatch();
+
+  const data = {id, title, description, rating, date, image}
+
+
+  const handleAdd = () => {
+    dispatch(addItem(data))
+    localStorage.setItem("my list", data)
+  }
+  
+
 
   return (
     <div className='modal-main rounded-lg'>
@@ -36,6 +51,8 @@ const InfoModal:React.FC<Props> = ({set,id, title, description, rating, date, im
       </div>
 
       <p className='text-xs w-11/12 text-justify lg:text-left lg:text-sm lg:w-11/12'>{description}</p>
+
+      <button className='flex'onClick={handleAdd} >Add</button>
       </div>
     </div>
   )
