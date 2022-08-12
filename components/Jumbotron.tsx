@@ -1,8 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { InformationCircleIcon } from '@heroicons/react/outline'
-import { FaPlay } from 'react-icons/fa'
-import Image from 'next/image'
-import Link from 'next/link'
 
 import dynamic from 'next/dynamic'
 interface Props {

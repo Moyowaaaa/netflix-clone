@@ -2,12 +2,12 @@ import { NextPage } from 'next'
 import React, { useEffect } from 'react'
 import Navbar from '../../components/Navbar'
 import { useSelector, useDispatch } from 'react-redux'
-import Row from '../../components/Row'
+
 import ListCard from '../../components/ListCard'
 
 
 const myList:NextPage = () => {
-    const dispatch = useDispatch()
+
     const list = useSelector((state:any) => state.myList)
 
     console.log("list",list.list)
@@ -22,19 +22,19 @@ const myList:NextPage = () => {
 
 
     <div className='pt-[4rem] px-4'>
-    <h2>
+    <h2 className='text-2xl'>
         My List
     </h2>
 
     </div>
 
     {list.list.length === 0 ? (
-        <div className='flex justify-center items-center'>
-            <h2>You have no movies/shows saved to your list</h2>
+        <div className='flex justify-start px-4 items-center'>
+            <h2>You have no movies/shows saved to your list ....</h2>
         </div>
 
     ) : ( 
-        <div className='overflow-x-scroll'>
+        <div className=''>
       
              
               <ListCard data={list.list} />
@@ -42,16 +42,7 @@ const myList:NextPage = () => {
         </div>
     )}
 
-    {/* {list.list.length === 0 ? (
-      <h2>You hve no items in your list</h2>
-    ):(
-      <div className='flex flex-col'>
-      {list.list.map((item:any, index:number) => (
-        <Row key={index} data={item} />
-      ))}
-      </div>
-    )}
-    */}
+    
 
 
     </div>

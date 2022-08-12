@@ -13,7 +13,8 @@ const myListSlice = createSlice({
             console.log("myMovies",state.list);
         },
         removeItem: (state, action) => {
-            state.list = state.list.filter(item => item !== action.payload);
+            state.list = state.list.filter((item:any) => item.id !== action.payload.id);
+            console.log("myMovies",state.list);
         }
     }
 
