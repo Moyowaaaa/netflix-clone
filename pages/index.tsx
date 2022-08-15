@@ -11,17 +11,11 @@ import Row from "../components/Row";
 import dynamic from "next/dynamic";
 
 import { fetchData } from "../utils/requests";
-
-interface Props {
-  popular: any[];
-  playing: any[];
-  popularTv: any[];
-  title:string[];
-  
-}
+import { HomeProps } from "../utils/interfaces";
 
 
-const Home:  NextPage<Props> = ({ popular, playing, popularTv }) => {
+
+const Home:  NextPage<HomeProps> = ({ popular, playing, popularTv }) => {
   const Banner = dynamic(() => import("../components/Banner"), {
     ssr: false,
   });

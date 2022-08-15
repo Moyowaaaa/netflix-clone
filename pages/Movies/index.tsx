@@ -6,19 +6,10 @@ import Navbar from "../../components/Navbar";
 import Row from "../../components/Row";
 import { fetchData } from "../../utils/requests";
 import dynamic from "next/dynamic";
+import { MovieProps } from "../../utils/interfaces";
 
 
-
-interface Props {
-  comingSoon: any[];
-  playing: any[];   
-  popular: any[];
-  topRated:any[];
-  
-}
-
-
-const Movies: NextPage<Props> = ({playing,popular,comingSoon, topRated,}) => {
+const Movies: NextPage<MovieProps> = ({playing,popular,comingSoon, topRated,}) => {
   const Banner = dynamic(() => import("../../components/Banner"), {
     ssr: false,
   });

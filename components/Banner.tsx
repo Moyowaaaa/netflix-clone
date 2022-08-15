@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { InformationCircleIcon } from '@heroicons/react/outline'
 import { FaPlay } from 'react-icons/fa'
 import InfoModal from "../components/InfoModal"
+import {PopularProp} from "../utils/interfaces"
 
 
-interface Props {
-    popular:any[]
-}
 
-const Banner:React.FC<Props> = ({popular}) => {
+
+const Banner:React.FC<PopularProp> = ({popular}) => {
   const [showModal,setShowModal] = useState<boolean>(false);
   const [selectedId,setSelectedId] = useState<any>(null);
   const [image,setImage] = useState<any>(null);

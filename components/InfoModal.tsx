@@ -4,20 +4,9 @@ import { addItem,removeItem } from '../redux/myListSlice';
 import { PlusIcon } from '@heroicons/react/outline';
 import { InformationCircleIcon } from '@heroicons/react/outline'
 import { FaPlay, FaCheck } from 'react-icons/fa'
+import { InfoProps } from '../utils/interfaces';
 
-
-
-interface Props {
-  set:any
-  id:number;
-  title:string,
-  rating:number,
-  description:string,
-  date:string | number | any,
-  image:any 
-}
-
-const InfoModal:React.FC<Props> = ({set,id, title, description, rating, date, image}) => {
+const InfoModal:React.FC<InfoProps> = ({set,id, title, description, rating, date, image}) => {
   const dispatch = useDispatch();
   const data = {id, title, description, rating, date, image}
   const list = useSelector((state:any) => state.myList)

@@ -5,14 +5,9 @@ import { fetchData } from "../../utils/requests";
 import Jumbotron from "../../components/Jumbotron";
 import type { NextPage } from "next";
 import dynamic from "next/dynamic";
+import { TvShowsProps } from "../../utils/interfaces";
 
-interface Props {
-  todaysTv: any[];
-  topRatedTv: any[];
-  popularTv: any[];
-}
-
-const Movies: NextPage<Props> = ({ todaysTv, topRatedTv, popularTv }) => {
+const Movies: NextPage<TvShowsProps> = ({ todaysTv, topRatedTv, popularTv }) => {
   const Banner = dynamic(() => import("../../components/Banner"), {
     ssr: false,
   });

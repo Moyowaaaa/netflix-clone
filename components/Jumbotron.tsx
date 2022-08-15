@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import { PopularProp } from '../utils/interfaces'
 
 import dynamic from 'next/dynamic'
-interface Props {
-    popular:any[],
-}
 
-const Jumbotron:React.FC<Props> = () => {
+
+const Jumbotron:React.FC<PopularProp> = () => {
 
     const ReactPlayer = dynamic(() => import('react-player'), { ssr: false })
 

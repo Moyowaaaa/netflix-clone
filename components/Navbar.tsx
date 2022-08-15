@@ -45,7 +45,7 @@ const Navbar:React.FC = () => {
     <div className={` w-full  mb-4 flex h-[4rem] py-0   fixed z-50  ${isScrolled? 'bg-[black]' : 'bg-transparent'}`}>
 
 
-        <div className='flex '>
+        <div className='flex overflow-scroll lg:overflow-none'>
             <Image src={logo} width={120}/>
         </div>
 <ul className='flex items-center gap-4 text-xs ml-16'>

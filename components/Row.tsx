@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import InfoModal from './InfoModal';
+import { MovieRowProps } from '../utils/interfaces';
 
 
 
@@ -10,13 +11,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-interface Props{
-  title?:string,
-  data:any[],
 
-}
 
-const Row:React.FC<Props> = ({ data, title}) => {
+
+const Row:React.FC<MovieRowProps> = ({ data, title}) => {
   const [showModal,setShowModal] = useState<boolean>(false);
   const [selectedId,setSelectedId] = useState<any>(null);
   const [image,setImage] = useState<any>(null);
