@@ -10,7 +10,6 @@ const myList:NextPage = () => {
 
     const list = useSelector((state:any) => state.myList)
 
-    console.log("list",list.list)
 
     
     

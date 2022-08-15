@@ -19,7 +19,7 @@ const Home:  NextPage<HomeProps> = ({ popular, playing, popularTv }) => {
   const Banner = dynamic(() => import("../components/Banner"), {
     ssr: false,
   });
-  console.log(popularTv)
+
 
   const content:any[] = [
      { title: "Popular Movies", data: popular },

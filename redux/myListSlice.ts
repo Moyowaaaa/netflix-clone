@@ -10,11 +10,11 @@ const myListSlice = createSlice({
     reducers: {
         addItem: (state, action) => {
             state.list.push(action.payload);
-            console.log("myMovies",state.list);
+            
         },
         removeItem: (state, action) => {
             state.list = state.list.filter((item:any) => item.id !== action.payload.id);
-            console.log("myMovies",state.list);
+         
         }
     }
 
