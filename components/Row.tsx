@@ -68,7 +68,7 @@ const Row:React.FC<MovieRowProps> = ({ data, title}) => {
               setRating(item.vote_average || item.rating)
               setImage(item.backdrop_path || item.poster_path || item.image)
             }}>
-          <img  src={`https://image.tmdb.org/t/p/w500/${item?.backdrop_path || item?.image}`}  alt={`${item?.name || item?.title || item?.original_name}`}  />
+          <img  src={`https://image.tmdb.org/t/p/original/${item?.backdrop_path || item?.image}`}  alt={`${item?.name || item?.title || item?.original_name}`}  />
           </div>
           </SwiperSlide>
         ))}

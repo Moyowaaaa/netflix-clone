@@ -35,7 +35,7 @@ const InfoModal:React.FC<InfoProps> = ({set,id, title, description, rating, date
 
   return (
     <div className='modal-main rounded-lg'>
-      <div className='modal-background h-[25rem] w-full '  style = {image !== null ? {backgroundImage: `url(https://image.tmdb.org/t/p/w500/${image})`} : {backgroundImage: `url(/fallback.jpeg)`}}>
+      <div className='modal-background h-[25rem] w-full '  style = {image !== null ? {backgroundImage: `url(https://image.tmdb.org/t/p/original/${image})`} : {backgroundImage: `url(/fallback.jpeg)`}}>
       <p className='w-[3rem] h-[3rem] rounded-full right-0 absolute py-4 mt-2 flex items-center justify-center cursor-pointer mr-4 bg-[black]' onClick={() => {
             set(false)
         }}>X</p>

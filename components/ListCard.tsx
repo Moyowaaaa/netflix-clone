@@ -39,7 +39,7 @@ const ListCard:React.FC<Props> = ({data}) => {
               setRating(item.vote_average || item.rating)
               setImage(item.backdrop_path || item.poster_path || item.image)
             }}>
-                    <img src={`https://image.tmdb.org/t/p/w500/${item.image || item.backdrop_path || item.poster_path }`} alt={item.title} width={300} height={400} />
+                    <img src={`https://image.tmdb.org/t/p/original/${item.image || item.backdrop_path || item.poster_path }`} alt={item.title} width={300} height={400} />
                 </div>
             ))}
 
