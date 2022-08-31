@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../../components/Navbar";
+
 import Row from "../../components/Row";
 import { fetchData } from "../../utils/requests";
 import Jumbotron from "../../components/Jumbotron";
@@ -11,6 +11,10 @@ const Movies: NextPage<TvShowsProps> = ({ todaysTv, topRatedTv, popularTv }) => 
   const Banner = dynamic(() => import("../../components/Banner"), {
     ssr: false,
   });
+
+  const Navbar = dynamic(() => import("../../components/Navbar"), {
+    ssr:false
+  })
 
 
   return (

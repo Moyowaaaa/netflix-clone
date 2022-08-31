@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import type { NextPage } from "next";
 
 import Jumbotron from "../../components/Jumbotron";
-import Navbar from "../../components/Navbar";
+
 import Row from "../../components/Row";
 import { fetchData } from "../../utils/requests";
 import dynamic from "next/dynamic";
@@ -13,6 +13,10 @@ const Movies: NextPage<MovieProps> = ({playing,popular,comingSoon, topRated,}) =
   const Banner = dynamic(() => import("../../components/Banner"), {
     ssr: false,
   });
+  const Navbar = dynamic(() => import("../../components/Navbar"), {
+    ssr:false
+  })
+
 
   return (
     <div className="flex flex-col bg-[#141414]  ">

@@ -4,7 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
+
 import Jumbotron from "../components/Jumbotron";
 import Row from "../components/Row";
 
@@ -19,6 +19,10 @@ const Home:  NextPage<HomeProps> = ({ popular, playing, popularTv }) => {
   const Banner = dynamic(() => import("../components/Banner"), {
     ssr: false,
   });
+
+  const Navbar = dynamic(() => import("../components/Navbar"), {
+    ssr:false
+  })
 
 
   const content:any[] = [

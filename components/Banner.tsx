@@ -27,7 +27,7 @@ const Banner:React.FC<PopularProp> = ({popular}) => {
   return (
     <div className='absolute top-16 h-[50vh] lg:h-[100vh] w-full flex flex-col object-cover ' >
         <div className='absolute w-full h-full'>
-        <img src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}  alt={"poster"} className="w-full h-full" />
+        <img src={`https://image.tmdb.org/t/p/original/${movie?.backdrop_path}`}  alt={movie?.title || movie?.name || movie?.original_name} className="w-full h-full" />
         </div>
 
         <div className='absolute bottom-6 left-2 lg:bottom-40 lg:left-6 flex flex-col gap-4 text-shadow-md '>
@@ -48,7 +48,7 @@ const Banner:React.FC<PopularProp> = ({popular}) => {
             setDate(movie?.release_date)
             setRating(movie?.vote_average)
             setImage(movie?.backdrop_path)
-4           }}
+          }}
          >
 
            <InformationCircleIcon className="h-5 w-5 md:h-8 md:w-8" /> More Info

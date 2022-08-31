@@ -1,7 +1,8 @@
 import { NextPage } from 'next'
 import React, { useEffect } from 'react'
-import Navbar from '../../components/Navbar'
+
 import { useSelector, useDispatch } from 'react-redux'
+import dynamic from 'next/dynamic'
 
 import ListCard from '../../components/ListCard'
 
@@ -9,6 +10,10 @@ import ListCard from '../../components/ListCard'
 const myList:NextPage = () => {
 
     const list = useSelector((state:any) => state.myList)
+    const Navbar = dynamic(() => import("../../components/Navbar"), {
+        ssr:false
+      })
+    
 
 
     
