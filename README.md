@@ -1,23 +1,43 @@
-# Next.js + Tailwind CSS Example
+# Low Budget Netflix Clone
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+## Demo
+[View Live Site](https://netflix-clone-moyowa.vercel.app)
 
-## Deploy your own
+Welcome to my low budget netflix-clone :), a web application I created to practice typescript and redux toolkit.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+![Screenshot of the home screen](/images/home%20screen.png)
+![Screenshot of the different categories](/images/categories.png)
+![Screenshot of the movie detail modal](/images/movie%20details.png)
+![Screenshot of the my movies and TV list](/images/mylist.png)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
 
-## How to use
+## Tools and Technologies
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+This Project was bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Technologies used include:
+
+
+-Next.js
+-TypeScript
+-Redux Toolkit
+-Tailwind CSS
+-Imdb Movie Database API
+
+## features
+
+The app has the following features:
+
+Home Screen that shows that diplays different genres of movies and Tv shows like Trending Movies, Now Playing, New Movies ...
+it also allows users to view details about TV shows and Movies like the title, description, year of release and movie rating
+it also alows users to add Tv shows and movies to their personal list and also remove them
+
+
+## Installation
+
+To install and run the project locally, download/clone the repo and run the following commands:
 
 ```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-# or
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
+npm install
+npm start
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+This runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
