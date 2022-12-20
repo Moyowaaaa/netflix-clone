@@ -5,7 +5,7 @@
 
 Welcome to my low budget netflix-clone :), a web application I created to practice typescript and redux toolkit.
 
-![Screenshot of the home screen](/images/home%20screen.png)
+![Screenshot of the home screen](/images/home.png)
 ![Screenshot of the different categories](/images/categories.png)
 ![Screenshot of the movie detail modal](/images/movie%20details.png)
 ![Screenshot of the my movies and TV list](/images/mylist.png)
