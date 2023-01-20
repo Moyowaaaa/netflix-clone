@@ -13,9 +13,7 @@ Welcome to my low budget netflix-clone :), a web application I created to practi
 
 ## Tools and Technologies
 
-This Project was bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Technologies used include:
-
-
+    
 -Next.js
 -TypeScript
 -Redux Toolkit
